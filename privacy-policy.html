@@ -16,8 +16,8 @@
 <p class="updated">最終更新 / Last updated: 2026-07-27</p>
 
 <div class="card">
-  <p><strong>要点</strong> — 氏名・メールアドレス・アカウントは一切いただきません。ゲームの進行データは<strong>お使いの端末内にのみ</strong>保存され、当方に送信されることはありません。本アプリは広告を表示し、広告配信事業者が広告識別子を利用する場合があります。パーソナライズ広告はアプリ内の「せってい」からいつでもオフにできます。</p>
-  <p><strong>In short</strong> — We ask for no name, email, or account. Your game progress is stored <strong>only on your device</strong> and is never uploaded to us. The app shows ads, and our advertising partner may use an advertising identifier. You can turn personalised ads off at any time in the in-app <strong>Settings</strong>.</p>
+  <p><strong>要点</strong> — 氏名・メールアドレス・アカウントは一切いただきません。<strong>セーブデータ</strong>（進行・コイン・ライフ）は<strong>お使いの端末内にのみ</strong>保存され、当方に送信されません。一方で、どのステージが難しすぎるか・不具合が出ていないかを知るために<strong>匿名の利用イベント</strong>を送信します（ランダムなインストールIDのみで、個人は特定できません／設定でオフにできます）。本アプリは広告を表示し、広告配信事業者が広告識別子を利用する場合があります。パーソナライズ広告はアプリ内の「せってい」からいつでもオフにできます。</p>
+  <p><strong>In short</strong> — We ask for no name, email, or account. Your <strong>saved game</strong> (progress, coins, lives) is stored <strong>only on your device</strong> and is never uploaded to us. We do collect <strong>anonymous usage events</strong> so we can see where the game is too hard or broken; they carry a random install ID, never your identity, and you can switch them off in Settings. The app shows ads, and our advertising partner may use an advertising identifier. You can turn personalised ads off at any time in the in-app <strong>Settings</strong>.</p>
 </div>
 
 <h2>1. 端末内に保存する情報 / What we store on your device</h2>
@@ -32,7 +32,25 @@
 <p>アプリを削除すると、これらはすべて消去されます。当方は複製を保持しておらず、復元はできません。</p>
 <p>Deleting the app deletes all of it. We have no copy and cannot restore it.</p>
 
-<h2>2. 広告について / Advertising</h2>
+<h2>2. 匿名の利用状況の計測 / Anonymous usage analytics</h2>
+<p>どのステージが難しすぎるか、どこで離脱しているか、不具合が起きていないかを把握するため、本アプリは<strong>匿名のイベント</strong>を当方のサーバー（Cloudflare Workers）に送信します。</p>
+<p>To find out which levels are too hard, where players get stuck, and whether the game is crashing, the app sends a small stream of <strong>anonymous events</strong> to our own server (Cloudflare Workers).</p>
+<h3>送信する情報 / What is sent</h3>
+<ul>
+  <li>ランダムな<strong>インストールID</strong>（初回起動時に端末上で生成される UUID）。広告識別子でも端末IDでもなく、アカウントとも紐づきません（そもそもアカウントがありません）。 / A random <strong>install ID</strong> (a UUID generated on your device). Not the advertising identifier, not a device ID, and not linked to any account.</li>
+  <li>ランダムなセッションIDと、そのセッション内でのイベントの順序 / A random session ID and the order of events within it</li>
+  <li>イベント名と簡単な数値：開いた画面、ステージの開始／クリア／失敗とその番号・スコア・★、広告の要求と結果、ゲームが停止した際の JavaScript エラーメッセージ / Event names and simple numbers: screens opened, level start / clear / fail with its number, score and stars, ad requests and their outcome, and JavaScript error messages when the game breaks</li>
+  <li>アプリのバージョン、プラットフォーム、OS バージョン、言語 / App version, platform, OS version and language</li>
+</ul>
+<h3>送信しない情報 / What is NOT sent</h3>
+<p>氏名、メールアドレス、連絡先、写真、広告識別子、精緻な位置情報、セーブデータの中身は送信しません。</p>
+<p>Your name, email, contacts, photos, the advertising identifier, precise location, or the contents of your saved game.</p>
+<div class="card">
+  <p><strong>あなたの選択</strong> — 既定でオンですが、<strong>「せってい」→「あそびかたの きろくを おくる」</strong>からいつでもオフにできます。オフにすると収集は直ちに停止し、未送信のデータは破棄されます。</p>
+  <p><strong>Your choice</strong> — this is on by default and can be switched off at any time under <strong>Settings → Share anonymous play data</strong>. Switching it off stops collection immediately and discards anything not yet sent.</p>
+</div>
+
+<h2>3. 広告について / Advertising</h2>
 <p>本アプリは無料で提供され、<strong>AppLovin MAX</strong> および同社が仲介する広告ネットワークによる広告収入で運営されています。広告の表示にあたり、これらの事業者は次の情報を処理する場合があります。</p>
 <p>The app is free and is funded by ads served through <strong>AppLovin MAX</strong> and the ad networks it mediates. To show ads, these partners may process:</p>
 <ul>
@@ -61,27 +79,27 @@
   <p>Until you make a choice, the app defaults to the <strong>most private</strong> setting: personalised ads off and do-not-sell on.</p>
 </div>
 
-<h2>3. お子さまについて / Children</h2>
+<h2>4. お子さまについて / Children</h2>
 <p>本アプリは 13 歳未満のお子さまを対象としておらず、お子さまの個人情報を意図的に収集することはありません。設定で「13さい みまん です」を選択いただいた場合、広告 SDK に対してその旨を設定し、パーソナライズされない年齢相応の広告のみを要求します。お子さまが個人情報を提供したとお考えの場合はご連絡ください。対応いたします。</p>
 <p>The app is not directed at children under 13, and we do not knowingly collect personal information from them. If you tell us in Settings that you are under 13, the app flags the ad SDK accordingly so that only non-personalised, age-appropriate ads are requested. If you believe a child has provided personal information, contact us and we will address it.</p>
 
-<h2>4. 購入について / Purchases</h2>
+<h2>5. 購入について / Purchases</h2>
 <p>本アプリには現在<strong>アプリ内課金はありません</strong>。今後追加された場合、決済は Apple が処理し、当方がお支払い情報を参照することはありません。</p>
 <p>The app currently contains <strong>no in-app purchases</strong>. If they are added, purchases are processed by Apple; we never see your payment details.</p>
 
-<h2>5. 収集しない情報 / Data we do NOT collect</h2>
-<p>アカウント、メールアドレス、連絡先、写真、マイク・カメラへのアクセス、精緻な位置情報は一切扱いません。当方がアプリ横断のプロファイルを作成することもありません。</p>
-<p>No accounts, no email addresses, no contacts, no photos, no microphone or camera access, no precise location, and no cross-app profile built by us.</p>
+<h2>6. 収集しない情報 / Data we do NOT collect</h2>
+<p>アカウント、メールアドレス、連絡先、写真、マイク・カメラへのアクセス、精緻な位置情報は一切扱いません。当方がアプリ横断のプロファイルを作成することもありません（上記の利用状況イベントは匿名で、個人を特定する情報とは結び付けられません）。</p>
+<p>No accounts, no email addresses, no contacts, no photos, no microphone or camera access, no precise location, and no cross-app profile built by us. (The usage events above are anonymous and are never joined to identifying information.)</p>
 
-<h2>6. あなたの権利 / Your rights</h2>
+<h2>7. あなたの権利 / Your rights</h2>
 <p>当方のサーバー上にあなたの個人データは存在しないため、当方側で開示・削除すべきものはありません。アプリが保存している情報をすべて削除するには、アプリを削除してください。広告事業者側の処理については上記リンクをご確認いただくか、当方までご連絡ください。</p>
 <p>Because we hold no personal data about you on our servers, there is nothing on our side to export or delete. To remove everything the app stores, delete the app. For questions about the advertising partners' processing, use the links above or contact us.</p>
 
-<h2>7. 変更 / Changes</h2>
+<h2>8. 変更 / Changes</h2>
 <p>本ポリシーを変更した場合は、上記の最終更新日を改め、新しい版をこの URL で公開します。</p>
 <p>If this policy changes, the "last updated" date above changes and the new version is published at this URL.</p>
 
-<h2>8. お問い合わせ / Contact</h2>
+<h2>9. お問い合わせ / Contact</h2>
 <p><a href="mailto:info@aisif.jp">info@aisif.jp</a></p>
 <footer class="site">
   <p>ポピー パズル (Poppy Puzzle) · <a href="mailto:info@aisif.jp">info@aisif.jp</a><br>
