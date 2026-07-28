@@ -13,26 +13,40 @@
   <div class="name">ポピー パズル<small>Poppy Puzzle</small></div>
 </header>
 <h1>プライバシーポリシー / Privacy Policy</h1>
-<p class="updated">最終更新 / Last updated: 2026-07-27</p>
+<p class="updated">最終更新 / Last updated: 2026-07-28</p>
 
 <div class="card">
-  <p><strong>要点</strong> — 氏名・メールアドレス・アカウントは一切いただきません。<strong>セーブデータ</strong>（進行・コイン・ライフ）は<strong>お使いの端末内にのみ</strong>保存され、当方に送信されません。一方で、どのステージが難しすぎるか・不具合が出ていないかを知るために<strong>匿名の利用イベント</strong>を送信します（ランダムなインストールIDのみで、個人は特定できません／設定でオフにできます）。本アプリは広告を表示し、広告配信事業者が広告識別子を利用する場合があります。パーソナライズ広告はアプリ内の「せってい」からいつでもオフにできます。</p>
-  <p><strong>In short</strong> — We ask for no name, email, or account. Your <strong>saved game</strong> (progress, coins, lives) is stored <strong>only on your device</strong> and is never uploaded to us. We do collect <strong>anonymous usage events</strong> so we can see where the game is too hard or broken; they carry a random install ID, never your identity, and you can switch them off in Settings. The app shows ads, and our advertising partner may use an advertising identifier. You can turn personalised ads off at any time in the in-app <strong>Settings</strong>.</p>
+  <p><strong>要点</strong> — 氏名・メールアドレス・アカウントは一切いただきません。<strong>セーブデータ</strong>（進行・コイン・ライフ）は端末内に保存され、端末のストレージが消去された場合に進行を復元できるよう、<strong>匿名のバックアップ</strong>を当方サーバーにも保存します（ゲームの進行のみ。氏名・メール・アカウントは含みません。アプリの「せってい」からいつでも削除できます）。一方で、どのステージが難しすぎるか・不具合が出ていないかを知るために<strong>匿名の利用イベント</strong>を送信します（ランダムなインストールIDのみで、個人は特定できません／設定でオフにできます）。本アプリは広告を表示し、広告配信事業者が広告識別子を利用する場合があります。パーソナライズ広告はアプリ内の「せってい」からいつでもオフにできます。</p>
+  <p><strong>In short</strong> — We ask for no name, email, or account. Your <strong>saved game</strong> (progress, coins, lives) is kept on your device, and an anonymous <strong>backup copy</strong> is stored on our server so your progress can be recovered if the device clears the app’s storage — game progress only, no name, email or account, and you can delete it in <strong>Settings</strong>. We do collect <strong>anonymous usage events</strong> so we can see where the game is too hard or broken; they carry a random install ID, never your identity, and you can switch them off in Settings. The app shows ads, and our advertising partner may use an advertising identifier. You can turn personalised ads off at any time in the in-app <strong>Settings</strong>.</p>
 </div>
 
 <h2>1. 端末内に保存する情報 / What we store on your device</h2>
-<p>以下はお使いの端末のローカルストレージにのみ保存され、当方には送信されません。</p>
-<p>The following is saved in local storage on your device only. It is never transmitted to us:</p>
+<p>以下はお使いの端末のローカルストレージに保存されます。</p>
+<p>The following is saved in local storage on your device:</p>
 <ul>
   <li>ステージの進行状況・★・ベストスコア / Level progress, stars and best scores</li>
   <li>コイン、ブースター、ハート（ライフ）、デイリータスクと連続ログインの状態 / Coins, boosters, lives (hearts), daily-task and streak state</li>
   <li>言語・サウンド・プライバシーの選択 / Your language, sound and privacy choices</li>
   <li>端末内でのみ利用する短い動作ログ / A short local diagnostic log used only on your own device</li>
 </ul>
-<p>アプリを削除すると、これらはすべて消去されます。当方は複製を保持しておらず、復元はできません。</p>
-<p>Deleting the app deletes all of it. We have no copy and cannot restore it.</p>
+<p>アプリを削除すると、端末内のこれらはすべて消去されます。進行のバックアップについては次の項をご覧ください。</p>
+<p>Deleting the app deletes all of this from the device. For the progress backup, see the next section.</p>
 
-<h2>2. 匿名の利用状況の計測 / Anonymous usage analytics</h2>
+<h2>2. 進行のバックアップ / Progress backup</h2>
+<p>iOS は端末の空き容量が不足すると、アプリのローカルストレージを消去することがあります。バックアップが無ければ、それはクリア済みのステージがすべて失われることを意味します。これを防ぐため、本アプリはゲームの進行の匿名のコピーを当方サーバー（Cloudflare Workers）に保存します。</p>
+<p>iOS may clear an app’s local storage when the device runs low on space. Without a backup that means losing every level you have cleared, permanently. To prevent that, the app keeps an anonymous copy of your game progress on our server (Cloudflare Workers).</p>
+<p><strong>含まれるもの / What is in it</strong> — ステージの進行、★、コイン、ブースター、ハート、デイリー・連続ログインの状態、キルトのコレクション、購入済みアイテムの所有情報。これ以外は含みません。<br>
+Level progress, stars, coins, boosters, hearts, daily/streak state, your quilt collection, and which in-app purchases you own. Nothing else.</p>
+<p><strong>識別方法 / How it is identified</strong> — 初回起動時に端末内で生成されるランダムな ID と秘密鍵のみを使います。氏名・メールアドレス・電話番号・広告識別子ではなく、アカウントもありません。計測用のインストール ID とは意図的に別のものにしているため、バックアップと利用状況データが結び付くことはありません。<br>
+A random ID and secret generated on your device the first time you play. It is not your name, email, phone number or advertising identifier, there is no account, and it is deliberately <strong>not</strong> the analytics install ID, so a backup cannot be joined to analytics data.</p>
+<p><strong>復元 / Restoring</strong> — 端末の進行が失われ、バックアップの方が進んでいる場合にのみ、起動時に自動で復元します。新しい進行が古いバックアップで上書きされることはありません。<br>
+If the app finds your progress missing but the backup has more, it restores it automatically on launch. It never replaces newer progress with an older backup.</p>
+<p><strong>削除 / Deleting it</strong> — アプリの<strong>「せってい」→「バックアップを けす」</strong>で、当方サーバーから即時に削除できます。端末内の進行はそのまま残ります。バックアップは匿名であるため、このアプリ内の操作が唯一の削除手段です（メールでお問い合わせいただいても、当方はあなたのバックアップを特定できません）。<br>
+<strong>Settings → Delete my cloud backup</strong> removes it from our server immediately; your progress on the device is not affected. Because the backup is anonymous, this in-app control is the only way it can be deleted — we cannot identify your backup from an email.</p>
+<p>アプリを削除すると、端末内のセーブとバックアップの鍵の両方が失われ、以後そのバックアップにはアクセスできなくなります。<br>
+Deleting the app removes the local save and the key to the backup, after which the backup can no longer be reached or restored.</p>
+
+<h2>3. 匿名の利用状況の計測 / Anonymous usage analytics</h2>
 <p>どのステージが難しすぎるか、どこで離脱しているか、不具合が起きていないかを把握するため、本アプリは<strong>匿名のイベント</strong>を当方のサーバー（Cloudflare Workers）に送信します。</p>
 <p>To find out which levels are too hard, where players get stuck, and whether the game is crashing, the app sends a small stream of <strong>anonymous events</strong> to our own server (Cloudflare Workers).</p>
 <h3>送信する情報 / What is sent</h3>
@@ -50,7 +64,7 @@
   <p><strong>Your choice</strong> — this is on by default and can be switched off at any time under <strong>Settings → Share anonymous play data</strong>. Switching it off stops collection immediately and discards anything not yet sent.</p>
 </div>
 
-<h2>3. 広告について / Advertising</h2>
+<h2>4. 広告について / Advertising</h2>
 <p>本アプリは無料で提供され、<strong>AppLovin MAX</strong> および同社が仲介する広告ネットワークによる広告収入で運営されています。広告の表示にあたり、これらの事業者は次の情報を処理する場合があります。</p>
 <p>The app is free and is funded by ads served through <strong>AppLovin MAX</strong> and the ad networks it mediates. To show ads, these partners may process:</p>
 <ul>
@@ -79,27 +93,27 @@
   <p>Until you make a choice, the app defaults to the <strong>most private</strong> setting: personalised ads off and do-not-sell on.</p>
 </div>
 
-<h2>4. お子さまについて / Children</h2>
+<h2>5. お子さまについて / Children</h2>
 <p>本アプリは 13 歳未満のお子さまを対象としておらず、お子さまの個人情報を意図的に収集することはありません。設定で「13さい みまん です」を選択いただいた場合、広告 SDK に対してその旨を設定し、パーソナライズされない年齢相応の広告のみを要求します。お子さまが個人情報を提供したとお考えの場合はご連絡ください。対応いたします。</p>
 <p>The app is not directed at children under 13, and we do not knowingly collect personal information from them. If you tell us in Settings that you are under 13, the app flags the ad SDK accordingly so that only non-personalised, age-appropriate ads are requested. If you believe a child has provided personal information, contact us and we will address it.</p>
 
-<h2>5. 購入について / Purchases</h2>
-<p>本アプリには現在<strong>アプリ内課金はありません</strong>。今後追加された場合、決済は Apple が処理し、当方がお支払い情報を参照することはありません。</p>
-<p>The app currently contains <strong>no in-app purchases</strong>. If they are added, purchases are processed by Apple; we never see your payment details.</p>
+<h2>6. 購入について / Purchases</h2>
+<p>本アプリには任意の<strong>アプリ内課金</strong>（コイン、ブースター、広告非表示）があります。決済はすべて <strong>Apple</strong> が処理し、当方がお支払い情報を参照・保存することはありません。アプリが記録するのは「どのアイテムを所有しているか」だけで、これは上記のバックアップに含まれます。機種変更時はショップの「こうにゅうを ふくげん」で復元できます。</p>
+<p>The app offers optional <strong>in-app purchases</strong> (coin packs, booster bundles and an ad-free upgrade). All purchases are processed by <strong>Apple</strong>; we never see or store your payment details. What the app records is only which items you own, so they can be restored — this is part of the backup described above. Use <strong>Restore purchases</strong> in the shop to recover them on a new device.</p>
 
-<h2>6. 収集しない情報 / Data we do NOT collect</h2>
+<h2>7. 収集しない情報 / Data we do NOT collect</h2>
 <p>アカウント、メールアドレス、連絡先、写真、マイク・カメラへのアクセス、精緻な位置情報は一切扱いません。当方がアプリ横断のプロファイルを作成することもありません（上記の利用状況イベントは匿名で、個人を特定する情報とは結び付けられません）。</p>
 <p>No accounts, no email addresses, no contacts, no photos, no microphone or camera access, no precise location, and no cross-app profile built by us. (The usage events above are anonymous and are never joined to identifying information.)</p>
 
-<h2>7. あなたの権利 / Your rights</h2>
-<p>当方のサーバー上にあなたの個人データは存在しないため、当方側で開示・削除すべきものはありません。アプリが保存している情報をすべて削除するには、アプリを削除してください。広告事業者側の処理については上記リンクをご確認いただくか、当方までご連絡ください。</p>
+<h2>8. あなたの権利 / Your rights</h2>
+<p>当方は氏名・メールアドレス・アカウントなどの個人データを保持していません。当方サーバーに置かれるのは匿名の利用イベントと進行のバックアップの 2 つだけで、どちらもアプリの「せってい」から操作できます。「あそびかたの きろくを おくる」をオフにすれば計測は停止し、「バックアップを けす」でバックアップは即時に削除されます。端末内の情報をすべて消すにはアプリを削除してください。広告事業者側の処理については上記リンクをご確認いただくか、当方までご連絡ください。</p>
 <p>Because we hold no personal data about you on our servers, there is nothing on our side to export or delete. To remove everything the app stores, delete the app. For questions about the advertising partners' processing, use the links above or contact us.</p>
 
-<h2>8. 変更 / Changes</h2>
+<h2>9. 変更 / Changes</h2>
 <p>本ポリシーを変更した場合は、上記の最終更新日を改め、新しい版をこの URL で公開します。</p>
 <p>If this policy changes, the "last updated" date above changes and the new version is published at this URL.</p>
 
-<h2>9. お問い合わせ / Contact</h2>
+<h2>10. お問い合わせ / Contact</h2>
 <p><a href="mailto:info@aisif.jp">info@aisif.jp</a></p>
 <footer class="site">
   <p>ポピー パズル (Poppy Puzzle) · <a href="mailto:info@aisif.jp">info@aisif.jp</a><br>
